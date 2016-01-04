@@ -21,10 +21,20 @@ $config = array(
     "cache_root" => __DIR__ . "/cache",
 
     "site" => array(
-        "www.cz001.com.cn" => array( "www_root" => "cz001", "index" => "index.html"),
-        "news.cz001.com.cn" => array( "www_root" => "news" , "index" => "index.html"),
-        "czphoto.cz001.com.cn" => array( "www_root" => "czphoto", "index"=>"index.html"),
+        "www.cz001.com.cn" => array( "www_root" => "cz001", "index" => "index.htm"),
+        "news.cz001.com.cn" => array( "www_root" => "news" , "index" => "index.htm"),
+        "czphoto.cz001.com.cn" => array( "www_root" => "czphoto", "index"=>"index.htm"),
     ),
+
+    "mime-type" => array(
+        "htm" => "text/html",
+        "html" => "text/html",
+        "txt" => "text/plain",
+        "jpg" => "image/jpg",
+        "gif" => "image/gif",
+        "png" => "image/png",
+    ),
+
 );
 
 function class_loader($class) {
