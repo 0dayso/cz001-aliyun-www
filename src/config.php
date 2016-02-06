@@ -11,9 +11,9 @@ require_once __DIR__ . "/../lib/aliyun-oss-php-sdk-2.0.1.phar";
 
 $config = array(
     "aliyun_oss" => array(
-        "access_id" => "",
-        "access_key" => "",
-        "endpoint" => "",
+        "access_id" => "Tzjz5C4rMJbzruPw",
+        "access_key" => "HfAPq2QELtj5F3zKc8EVt2dvxJWqoF",
+        "endpoint" => "oss-cn-shanghai.aliyuncs.com",
         "bucket" => "cz001-www" ),
 
     "www_root" => "/var/www/html",
@@ -21,9 +21,18 @@ $config = array(
     "cache_root" => __DIR__ . "/cache",
 
     "site" => array(
-        "www.cz001.com.cn" => array( "www_root" => "cz001", "index" => "index.html"),
-        "news.cz001.com.cn" => array( "www_root" => "news" , "index" => "index.html"),
-        "czphoto.cz001.com.cn" => array( "www_root" => "czphoto", "index"=>"index.html"),
+        "www.cz001.com.cn" => array( "www_root" => "cz001", "index" => "index.htm"),
+        "news.cz001.com.cn" => array( "www_root" => "news" , "index" => "index.htm"),
+        "czphoto.cz001.com.cn" => array( "www_root" => "czphoto", "index"=>"index.htm"),
+    ),
+
+    "mime-type" => array(
+        "htm" => "text/html",
+        "html" => "text/html",
+        "txt" => "text/plain",
+        "jpg" => "image/jpg",
+        "gif" => "image/gif",
+        "png" => "image/png",
     ),
 );
 
