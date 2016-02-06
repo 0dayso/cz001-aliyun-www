@@ -41,6 +41,7 @@ class OSSWeb {
 
         if (! in_array($this->server_name, array_keys($config['site']))) {
             header("Invalid hostname", true, 500);
+            print "Invalid hostname: {$this->server_name}";
             exit;
         }
         $site = $config['site'][$this->server_name];
@@ -56,7 +57,7 @@ class OSSWeb {
 		print "resource:$res_path not found.";
                 break;
             case 200:
-                $pi = pathinfo($res_path); $ext = $pi['extension'];
+                $pi = pathinfo($res_path); $ext = strtolower($pi['extension']);
                 if (in_array($ext, array_keys($config['mime-type']))) {
                     $content_type = $config['mime-type'][$ext];
                 }

@@ -34,6 +34,7 @@ $config = array(
         "gif" => "image/gif",
         "png" => "image/png",
     ),
+
 );
 
 function class_loader($class) {
