@@ -35,6 +35,13 @@ $config = array(
         "png" => "image/png",
     ),
 
+    "cms40" => array(
+        "publish_root" => "/var/www/html",
+        "publish_log"  => "/home/transReceiver/logs/cms_trans.log",
+        "import_pid_file"  => __DIR__."/run/aliyun_oss_import.pid",
+        "sftp_log" => "/var/log/sftp.log",
+        "sync_logger" => __DIR__."/logs/syncer-%s.log",
+    ),
 );
 
 function class_loader($class) {
