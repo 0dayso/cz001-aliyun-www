@@ -11,9 +11,9 @@ require_once __DIR__ . "/../lib/aliyun-oss-php-sdk-2.0.1.phar";
 
 $config = array(
     "aliyun_oss" => array(
-        "access_id" => "",
-        "access_key" => "",
-        "endpoint" => "",
+        "access_id" => "Tzjz5C4rMJbzruPw",
+        "access_key" => "HfAPq2QELtj5F3zKc8EVt2dvxJWqoF",
+        "endpoint" => "oss-cn-shanghai.aliyuncs.com",
         "bucket" => "cz001-www" ),
 
     "www_root" => "/var/www/html",

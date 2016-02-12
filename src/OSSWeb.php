@@ -9,7 +9,7 @@
 /**
  * 将web请求rewrite
  *
- * ^(.*)$ =>  /index.php?object=$1
+ * ^(.*)$ =>  /OSSWeb.php?object=$1
  */
 
 
@@ -25,18 +25,16 @@ class OSSWeb {
 
         $this->server_name = $this->server['SERVER_NAME'];
         if (isset($this->request['object'])) {
-            if ($this->request['object'] == "/") {
-                $this->request_uri = "/".$config['site'][$this->server_name]['index'];
-            }
-            else {
-                $this->request_uri = $this->request['object'];
-            }
+	    if ($this->request['object'] == "/") {
+		$this->request_uri = "/".$config['site'][$this->server_name]['index'];
+	    }
+	    else 
+            	$this->request_uri = $this->request['object'];
         }
         else {
             $this->request_uri = $config['site'][$this->server_name]['index'];
         }
     }
-
 
     public function index() {
         global $config;
@@ -56,6 +54,7 @@ class OSSWeb {
         switch ($file_object['status']) {
             case 404:
                 header("HTTP/1.1 404 Not Found", true, 404);
+		print "resource:$res_path not found.";
                 break;
             case 200:
                 $pi = pathinfo($res_path); $ext = strtolower($pi['extension']);
