@@ -23,7 +23,7 @@ class OSSWeb {
         $this->server = $_SERVER;
         $this->request = $_REQUEST;
 
-        $this->server_name = $this->server['SERVER_NAME'];
+        $this->server_name = $this->server['HTTP_HOST'];
         if (isset($this->request['object'])) {
 	    if ($this->request['object'] == "/") {
 		$this->request_uri = "/".$config['site'][$this->server_name]['index'];
